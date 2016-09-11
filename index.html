@@ -31,7 +31,7 @@
       <div class="list-block">
         <ul>
           <li>
-            <a href="aboutd.html" class="item-link item-content close-panel">
+            <a href="login.html" class="item-link item-content close-panel">
               <div class="item-media"><i class="icon icon-f7"></i></div>
               <div class="item-inner">
                 <div class="item-title">Item title</div>
@@ -83,7 +83,7 @@
             </div>
           </li>
           <li>
-            <a href="#" class="item-link item-content">
+            <a id="logout" href="#" class="item-link item-content">
               <div class="item-media"><i class="icon icon-f7"></i></div>
               <div class="item-inner">
                 <div class="item-title">Logout</div>
@@ -122,15 +122,53 @@
             <div class="page-content">
               <div class="content-block">
               <p>Чтобы далеко не ходить, создадим небольшое приложение-пример, где можно будет посмотреть, как объединить отдельные компоненты фреймворка в единое приложение. Будем использовать slide menu, pull to refresh, infinite scroll, смену material/ios style на лету и огромным списком на 8000 элементов, который не тормозит (virtual list).
-
-
-Больше ничего не потребуется, другие библиотеки или фреймворки для создания приложения не нужны. Но при желании можно использовать require.js, angular.js, matreshka.js итд.</p>
-
-
+              Больше ничего не потребуется, другие библиотеки или фреймворки для создания приложения не нужны. Но при желании можно использовать require.js, angular.js, matreshka.js итд.</p>
               <!-- Link to another page -->
               <a href="aboutd.html">About app</a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login screen -->
+    <div class="login-screen">
+      <div class="view">
+        <div data-page="login" class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">My App</div>
+            <form>
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Username</div>
+                      <div class="item-input">
+                        <input type="text" name="username" placeholder="Your username">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Password</div>
+                      <div class="item-input">
+                        <input type="password" name="password" placeholder="Your password">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a id="login" href="#" class="item-link list-button">Sign In</a></li>
+                </ul>
+                <div class="list-block-label">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p><a href="#" class="close-login-screen">Close Login Screen</a></p>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
