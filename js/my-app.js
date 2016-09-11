@@ -49,6 +49,7 @@ $$('#login').on('click', function() {
 		}
 	});
 });
+//tets
 
 // Callbacks to run specific code for specific pages, for example for About page:
 // myApp.onPageInit('about', function (page) {
