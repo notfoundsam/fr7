@@ -1,0 +1,11 @@
+.card-green {
+    background-color: #f0fff7;
+}
+.card-red {
+	background-color: #fff0f0;
+}
+
+.bidding-inner {
+	display: flex;
+	justify-content: space-between;
+}

@@ -18,6 +18,9 @@ console.log('START');
 $$.ajax({
 	url: ajax_host + '/admin/api/check_login',
 	type: 'POST',
+	// success: function () {
+	// 	mainView.router.load({url: 'bid.html'});
+	// },
 	statusCode: {
 		401: function (xhr) {
 			myApp.loginScreen();
@@ -38,9 +41,11 @@ $$('#login').on('click', function() {
 			switch (d_obj.status_code) {
 				case 10: 
 					myApp.closeModal('.login-screen');
+					// mainView.router.load({url: 'bid.html'});
 					break;
 				case 20: 
 					myApp.closeModal('.login-screen');
+					// mainView.router.load({url: 'bid.html'});
 					break;
 				case 30:
 					console.log('wrong');
