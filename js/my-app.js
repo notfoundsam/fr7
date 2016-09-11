@@ -1,4 +1,5 @@
 var ajax_host = 'http://yahooauc.dev';
+// var ajax_host = 'http://yahooauc-servletyahoo.rhcloud.com';
 
 // Initialize app
 var myApp = new Framework7();
