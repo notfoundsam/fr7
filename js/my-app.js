@@ -1,4 +1,5 @@
-var ajax_host = 'http://yahooauc.dev';
+// var ajax_host = 'http://yahooauc.dev';
+var ajax_host = '';
 // var ajax_host = 'http://yahooauc-servletyahoo.rhcloud.com';
 
 // Initialize app
@@ -50,6 +51,21 @@ $$('#login').on('click', function() {
 				case 30:
 					console.log('wrong');
 					break;
+			}
+		}
+	});
+});
+
+$$('#logout').on('click', function() {
+	myApp.closePanel();
+	$$.ajax({
+		url: ajax_host + '/admin/api/logout',
+		type: 'POST',
+		success: function (data) {
+			var d_obj = JSON.parse(data);
+			console.log(d_obj);
+			if (d_obj.status_code == 40) {
+				myApp.loginScreen();
 			}
 		}
 	});
