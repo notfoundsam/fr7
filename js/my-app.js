@@ -3,7 +3,10 @@ var ajax_host = '';
 // var ajax_host = 'http://yahooauc-servletyahoo.rhcloud.com';
 
 // Initialize app
-var myApp = new Framework7();
+var myApp = new Framework7({
+    //Tell Framework7 to compile templates on app init
+    precompileTemplates: true,
+});
  
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
