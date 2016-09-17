@@ -10,7 +10,7 @@
                 <i class="icon icon-back"></i>
             </a>
         </div>
-        <div class="center sliding">Bidding</div>
+        <div class="center sliding">{{title}}</div>
         <div class="right">
           <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
         </div>
@@ -19,93 +19,28 @@
 
     <div class="page-content">
 
-      <div class="card card-red">
+      {{#each auctions}}
+      <div class='card card-{{#js_compare "this[5] === current_bidder"}}green{{else}}red{{/js_compare}}'>
         <div class="card-header">
-          <div>JST科学技術用語日英対訳辞書学技術用語日英対訳辞書での意味</div>
+          <div>{{1}}</div>
           </div>
         <div class="card-content">
           <div class="card-content-inner bidding-inner">
-            <div>$1500</div>
-            <div>1 hour</div>
-            <div>vintagekinggshgshgsh</div>
+            <div>{{2}}</div>
+            <div>{{6}}</div>
+            <div>{{4}}</div>
           </div>
         </div>
         <div class="card-footer">
-          <div>Bids: 10</div>
-          <div>ID: d3535352</div>
-          <div><a href="">New price</a></div>
+          <div>Bids: {{3}}</div>
+          <div>ID: {{0}}</div>
+          <div><a href="#">New price</a></div>
         </div>
       </div>
-      <div class="card card-green">
-        <div class="card-header">
-          <div>JST科学技術用語日英対訳辞書学技術用語日英対訳辞書での意味</div>
-          </div>
-        <div class="card-content">
-          <div class="card-content-inner bidding-inner">
-            <div>$1500</div>
-            <div>1 hour</div>
-            <div>vintagekinggshgshgsh</div>
-          </div>
-        </div>
-        <div class="card-footer">
-          <div>Bids: 10</div>
-          <div>ID: d3535352</div>
-          <div><a href="">New price</a></div>
-        </div>
-      </div>
-      <div class="card card-green">
-        <div class="card-header">
-          <div>JST科学技術用語日英対訳辞書学技術用語日英対訳辞書での意味</div>
-          </div>
-        <div class="card-content">
-          <div class="card-content-inner bidding-inner">
-            <div>$1500</div>
-            <div>1 hour</div>
-            <div>vintagekinggshgshgsh</div>
-          </div>
-        </div>
-        <div class="card-footer">
-          <div>Bids: 10</div>
-          <div>ID: d3535352</div>
-          <div><a href="">New price</a></div>
-        </div>
-      </div>
-      <div class="card card-green">
-        <div class="card-header">
-          <div>JST科学技術用語日英対訳辞書学技術用語日英対訳辞書での意味</div>
-          </div>
-        <div class="card-content">
-          <div class="card-content-inner bidding-inner">
-            <div>$1500</div>
-            <div>1 hour</div>
-            <div>vintagekinggshgshgsh</div>
-          </div>
-        </div>
-        <div class="card-footer">
-          <div>Bids: 10</div>
-          <div>ID: d3535352</div>
-          <div><a href="">New price</a></div>
-        </div>
-      </div>
-      <div class="card card-green">
-        <div class="card-header">
-          <div>JST科学技術用語日英対訳辞書学技術用語日英対訳辞書での意味</div>
-          </div>
-        <div class="card-content">
-          <div class="card-content-inner bidding-inner">
-            <div>$1500</div>
-            <div>1 hour</div>
-            <div>vintagekinggshgshgsh</div>
-          </div>
-        </div>
-        <div class="card-footer">
-          <div>Bids: 10</div>
-          <div>ID: d3535352</div>
-          <div><a href="">New price</a></div>
-        </div>
-      </div>
-         
-    </div>
+      {{else}}
+      NOOOOOOO
+      {{/each}} 
 
+    </div>
   </div>
 </div>  
