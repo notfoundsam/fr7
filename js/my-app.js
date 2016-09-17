@@ -31,6 +31,7 @@ $$.ajax({
 		var d_obj = JSON.parse(data);
 		if (d_obj.status_code == 100) {
 			$$('#username').text(d_obj.result.current_user);
+			console.log(d_obj.result.current_user);
 			current_bidder = d_obj.result.current_bidder;
 		}
 	},
@@ -88,6 +89,8 @@ $$('#login').on('click', function() {
 			var d_obj = JSON.parse(data);
 			switch (d_obj.status_code) {
 				case 10: 
+					$$('#username').text(d_obj.result.current_user);
+					current_bidder = d_obj.result.current_bidder;
 					myApp.closeModal('.login-screen');
 					break;
 				case 20: 
