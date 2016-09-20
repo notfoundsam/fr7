@@ -1,15 +1,13 @@
 // var ajax_host = 'http://yahooauc.dev';
-var ajax_host = '';
+// var ajax_host = '';
 var current_bidder = '';
-// var ajax_host = 'http://yahooauc-servletyahoo.rhcloud.com';
+var ajax_host = 'http://yahooauc-servletyahoo.rhcloud.com';
 
 // Initialize app
 var myApp = new Framework7({
     //Tell Framework7 to compile templates on app init
     template7Pages: true,
     material: true,
-    // cacheIgnore: ['bidding.html'],
-    // cache: false,
 
 });
  
@@ -59,12 +57,14 @@ $$('#bidding').on('click', function() {
 			if (d_obj.status_code == 100) {
 				myApp.hideIndicator();
 
+				var auctions = d_obj.result.auctions ? d_obj.result.auctions : null;
+
 				mainView.router.load({
 					url: 'bidding.html',
 					reload: true,
 					context: {
 						title: 'Bidding',
-						auctions: d_obj.result.auctions,
+						auctions: auctions,
 						current_bidder: current_bidder
 					}
 				})
@@ -117,9 +117,4 @@ $$('#logout').on('click', function() {
 			}
 		}
 	});
-});
-
-$$(document).on('pageInit', function (e) {
-  // console.log($$(this).find('.page').attr('data-page'));
-  
 });
