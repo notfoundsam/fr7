@@ -78,12 +78,20 @@ $$('#bidding').on('click', function() {
 });
 
 $$('#login').on('click', function() {
+	var email = $$('input[name=username]').val();
+	var password = $$('input[name=password]').val();
+
+	if (!email && !password) {
+		myApp.alert('Enter both username and password', 'Input error');
+		return;
+	}
+
 	$$.ajax({
 		url: ajax_host + '/admin/api/login',
 		type: 'POST',
 		data: {
-			email: $$('input[name=username]').val(),
-			password: $$('input[name=password]').val()
+			email: email,
+			password: password
 		},
 		success: function (data) {
 			var d_obj = JSON.parse(data);
@@ -97,7 +105,7 @@ $$('#login').on('click', function() {
 					myApp.closeModal('.login-screen');
 					break;
 				case 30:
-					console.log('wrong');
+					myApp.alert('Login or password incorect', 'Login error');
 					break;
 			}
 		}
