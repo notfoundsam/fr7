@@ -1,5 +1,5 @@
 .card-green {
-    background-color: #f0fff7;
+	background-color: #f0fff7;
 }
 .card-red {
 	background-color: #fff0f0;
@@ -8,4 +8,17 @@
 .bidding-inner {
 	display: flex;
 	justify-content: space-between;
+}
+.bidding-images {
+	padding: 16px 16px 0;
+}
+.bidding-images img {
+	width: 100%;
+}
+.bidding-images > div {
+	font-size: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 30%;
 }

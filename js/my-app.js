@@ -81,7 +81,7 @@ $$('#login').on('click', function() {
 	var email = $$('input[name=username]').val();
 	var password = $$('input[name=password]').val();
 
-	if (!email && !password) {
+	if (!email || !password) {
 		myApp.alert('Enter both username and password', 'Input error');
 		return;
 	}

@@ -25,8 +25,15 @@
           <div>{{1}}</div>
           </div>
         <div class="card-content">
+          {{#if this.images}}
+          <div class="bidding-images bidding-inner">
+            {{#each this.images}}
+            <div><img src="{{this}}" alt=""></div>
+            {{/each}}
+          </div>
+          {{/if}}
           <div class="card-content-inner bidding-inner">
-            <div>{{2}}</div>
+            <div>&#165;{{2}}</div>
             <div>{{6}}</div>
             <div>{{4}}</div>
           </div>
@@ -39,7 +46,7 @@
       </div>
       {{else}}
       NOOOOOOO
-      {{/each}} 
+      {{/each}}
 
     </div>
   </div>
