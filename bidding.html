@@ -1,12 +1,10 @@
-<!-- We don't need full layout in this file because this page will be parsed with Ajax. It is just enough to put here .navbar and .page-->
- 
 <div class="pages">
   <div data-page="bidding" class="page">
     <div class="navbar">
       <div class="navbar-inner">
         <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
          <div class="left">
-            <a href="index.html" class="link icon-only">
+            <a href="bid.html" class="link icon-only">
                 <i class="icon icon-back"></i>
             </a>
         </div>
@@ -20,7 +18,7 @@
     <div class="page-content">
 
       {{#each auctions}}
-      <div class='card card-{{#js_compare "this[5] === current_bidder"}}green{{else}}red{{/js_compare}}'>
+      <div class='card bidding-card card-{{#js_compare "this[5] === current_bidder"}}green{{else}}red{{/js_compare}}'>
         <div class="card-header">
           <div>{{1}}</div>
           </div>
@@ -33,7 +31,7 @@
           </div>
           {{/if}}
           <div class="card-content-inner bidding-inner">
-            <div>&#165;{{2}}</div>
+            <div>&#165;<span class="bid-price">{{2}}</span></div>
             <div>{{6}}</div>
             <div>{{4}}</div>
           </div>
@@ -41,13 +39,12 @@
         <div class="card-footer">
           <div>Bids: {{3}}</div>
           <div>ID: {{0}}</div>
-          <div><a href="#">New price</a></div>
+          <div><a href="#" class="bid-up" data-id="{{0}}">New price</a></div>
         </div>
       </div>
       {{else}}
       NOOOOOOO
       {{/each}}
-
     </div>
   </div>
-</div>  
+</div>
